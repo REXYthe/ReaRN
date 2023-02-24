@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perfect you</title>
+        <style>
+        .my-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          
+          .my-button:hover {
+            background-color: #3e8e41; /* Darker green */
+          }
+                .rain {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                background-color: #ccc;
+                }
+
+                .drop {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: blue;
+                border-radius: 50%;
+                animation: fall 1s infinite linear;
+                }
+
+                @keyframes fall {
+                0% {
+                    top: -10px;
+                }
+                100% {
+                    top: 200px;
+                }
+                }
+
+                .drop::before {
+                content: "";
+                position: absolute;
+                top: -20px;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: blue;
+                opacity: 0.5;
+                animation: ripple 1s infinite linear;
+                }
+
+                @keyframes ripple {
+                0% {
+                    transform: scale(0);
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 0;
+                }
+                }
+        </style>
+    </head>
+    <body>
+        <h1>people are very strange people</h1>
+          <table class="raim">
+            <tr>
+            <td class="drop"></td>
+            </tr>
+          </table>
+          <button class="my-button">Hover Me</button>
+    </body>
+</html>
